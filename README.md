@@ -1,7 +1,7 @@
 Magic Mirror
 ============
 
-**[(Live demo)](http://4344457357774542.onion/)**
+**[(Live demo)](http://li7qxmk72kp3sgz4.onion/)**
 
 A small, secure, and easy to use encrypted imagehost. 
 
