@@ -12,6 +12,9 @@ A small, secure, and easy to use encrypted imagehost.
 
 Note: If you don't have Tor on whatever box you run this on, you'll need to change the proxy settings in upload.php.
 
+**Known vulnerabilities**
+* If a web server keeps access logs and those access logs include GET parameters, an attacker with access to the logs can see the decryption keys to files. (To fix this vuln is possible and not particularly hard. However, it removes all potential for image embedding. You'll just have to trust the host in this case.)
+
 **Legal**
 
 I don't care what you do with this file. If you have the source, all of the work I've put in this may as well be yours. You can take my name off of it, change the name of the software, you can do *ANYTHING* you want with it. 'Mi casa es su casa' as the Spanish would say. All I ask is that, if you do use this source elsewhere, that you not use it for malicious purposes and that you not try to view what users upload without their knowledge.
