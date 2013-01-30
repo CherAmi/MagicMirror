@@ -49,7 +49,7 @@ if(isset($img) && isset($key)) {
 	$imagesize = filesize("img/$tempfile");
 	$currentbandwidth = file_get_contents("bandwidth.txt");
 	$f = fopen("bandwidth.txt", "w+");
-	fwrite($f, $currentbandwidth + $imagesize);
+	fwrite($f, ($currentbandwidth + $imagesize));
 	fclose($f);
 	unlink("img/$tempfile");
 
