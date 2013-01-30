@@ -45,7 +45,12 @@ if(isset($img) && isset($key)) {
 		header("Content-Type: image/gif");
 		imagegif($im);
 	}
-
+	
+	$imagesize = filesize("img/$tempfile");
+	$currentbandwidth = file_get_contents("bandwidth.txt");
+	$f = fopen("bandwidth.txt", "w+");
+	fwrite($f, $currentbandwidth + $imagesize);
+	fclose($f);
 	unlink("img/$tempfile");
 
 } else {

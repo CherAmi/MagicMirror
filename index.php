@@ -1,6 +1,15 @@
 <?php
 include("attic.php");
 
+$img = scandir("img");
+$imgcount = count($img);
+$size = 0;
+foreach($img as $file) {
+	$size .= filesize("img/" . $file);
+}
+$size = round(($size/1024)/1024, 2);
+$bandwidth = "(unfinished)";
+
 echo "
 
 <div class='dp50body ltext' style='background-color:#666;'>
@@ -35,6 +44,8 @@ echo "
 			</form>
 		</center>
 	</div>
+	<h2>Stats</h2>
+	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
 </div>
 
 ";
