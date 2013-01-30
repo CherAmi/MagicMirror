@@ -28,6 +28,7 @@ I don't care what you do with this file. If you have the source, all of the work
 * 1.) Clone this repository
 * 2.) Make a directory named "img"
 * 3.) Chmod upload.php to be able to write to the img directory
-* 4.) Spread the link around!
+* 4.) Chmod bandwidth.txt and image.php so that image.php can write bandwidth stats properly
+* 5.) Spread the link around!
 
 -*Cher Ami*
