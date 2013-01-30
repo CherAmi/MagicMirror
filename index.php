@@ -2,13 +2,13 @@
 include("attic.php");
 
 $img = scandir("img");
-$imgcount = count($img);
+$imgcount = count($img) - 2; // Gotta account for "." and ".."
 $size = 0;
-foreach($img as $file) {
+foreach($img as $file) { // Not accounting for them here though, cause it's a pain in the ass and they're miniscule
 	$size .= filesize("img/" . $file);
 }
 $size = round(($size/1024)/1024, 2);
-$bandwidth = "(unfinished)";
+$bandwidth = round((file_get_contents("bandwidth.txt")/1024)/1024, 2);
 
 echo "
 
