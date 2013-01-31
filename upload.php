@@ -45,7 +45,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		}
 		
 		$key = md5(rand(0, 0x7FFFFF));
-		$rand = md5(rand(0, 0x7FFFFF));
+		$rand = hash("crc32", rand(0, 0x7FFFFF));
 
 		$crypt = new Crypt_AES(CRYPT_AES_MODE_ECB);
 		$crypt->setKey($key);
