@@ -26,26 +26,34 @@ echo "
 	If you see something that breaks these rules, <strong>email me at <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>.</strong> Include the URL to the image so that I can remove it if it does break one of these rules.</p>
 </div>
 <div class='dp50body dtext' style='background-color:#999;'>
+	<h2>Stats</h2>
+	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
+	<h2>Misc</h2>
+	<p>Contact email is <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>. If at any time you want me to PGP sign a message for verification purposes, ask and I'll gladly do so.
+	Source is available <a href='http://github.com/CherAmi/MagicMirror'>here</a>.</p>
+	<center><h2>Upload<br /></h2></center>
 	<div class='dp50'>
 		<center>
-			<h2>File upload</h2>
+			<h2>File</h2>
 			<form action='upload.php' method='post' enctype='multipart/form-data'>
 				<input type='file' name='pic'>
+
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
 	</div>
+
 	<div class='dp50'>
 		<center>
-			<h2>URL upload</h2>
+			<h2>URL</h2>
 			<form action='upload.php' method='post'>
+
 				<input type='text' name='url' placeholder='Image URL'>
 				<input type='submit' value='Upload'>
 			</form>
+
 		</center>
 	</div>
-	<h2>Stats</h2>
-	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
 </div>
 
 ";
