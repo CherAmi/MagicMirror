@@ -30,7 +30,8 @@ echo "
 	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
 	<h2>Misc</h2>
 	<p>Contact email is <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>. If at any time you want me to PGP sign a message for verification purposes, ask and I'll gladly do so.
-	Source is available <a href='http://github.com/CherAmi/MagicMirror'>here</a>.</p>
+	<br />Source is available <a href='http://github.com/CherAmi/MagicMirror'>here</a>.
+	<br />The new i2p url will be magicmirror.i2p - Until it's added to the inr.i2p and stats.i2p address books, use this <a href='http://127.0.0.1:7657/susidns/addressbook.jsp?book=private&hostname=magicmirror.i2p&destination=saDtHuMBEZmqqTSa1jMUMtmjgyQDx9927NMiSRe5SsgIxfyKPbcDwEInSnTStYH1OUUR7nfQ28qKxCESxGriccY0CSa8nmvYDJPAte8Up19kzIG-~gtvVuXVHjo4DF5w3f~rupRqhb0GA8HnVhI9~NGNVvpgV-6TEWpEpJr12tWIRFr9rXzH1~F5cNVpNDxKLhMT988TJNtkeq8KvpyWxAN3Kt9all0k6gNqTaxQsnXUFkbpQxL2wfj~0Wpw4BMvrgGviKd7P9jJGVATsLXD5GIvQFiKX0PJjTt~CUT6PjPb25zHbE0Su0d~QhyssWH2Rqj~fKEEqH2m5F~4TLLWnzpgmA4YqtgV3kH~YFuiYRnaGJ0f15zqhz1B9kYgym1P97JwsWGGu79W-zVEoxhSZ-HqMraU4-Q~YgZfslXERKpjrD8~hZR0hdTiwX1f4FCmVNLaL3vUKuoM1XprS4M0HQE6wiWOey2Z4XiMR4RxRhPSwTkObiK00uQbB7w~YRUpAAAA'>susiDNS link</a> to use magicmirror.i2p properly.
 	<center><h2>Upload<br /></h2></center>
 	<div class='dp50'>
 		<center>
