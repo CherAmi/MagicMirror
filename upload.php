@@ -1,5 +1,6 @@
 <?php
 $i2p = "http://j4mosyh4wdjga2pz4jiwxq5td4n4jnnxeru2kciiv3ebjzsnkcda.b32.i2p";
+$i2p2 = "http://magicmirror.i2p";
 $onion = "http://li7qxmk72kp3sgz4.onion";
 include("cryptlib.php");
 // gettld function from http://codepad.org/LSQ1VyyL
@@ -59,7 +60,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>Tor</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>b32.i2p</a>, <a href='$i2p2/image.php?img=$rand&key=$key'>magicmirror.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>Tor</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
 		</div>
 		";
 
@@ -88,7 +89,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it <a href='image.php?img=$rand&key=$key'>here</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>b32.i2p</a>, <a href='$i2p2/image.php?img=$rand&key=$key'>magicmirror.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>Tor</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
 		</div>
 		";
 
