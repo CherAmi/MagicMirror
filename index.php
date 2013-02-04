@@ -12,7 +12,7 @@ $bandwidth = round((file_get_contents("bandwidth.txt")/1024)/1024, 2);
 
 echo "
 
-<div class='dp50body' style='background-color:#444; color:#bbb;'>
+<div class='dp50body ltext' style='background-color:#666;'>
 	<h2>What is Magic Mirror?</h2>
 	<p>Magic Mirror is a custom encrypted image host. Nothing you post here can be seen by anybody (including me) due to the way the encryption works unless they're sent a URL with a decryption key in it.<br />Also, it's worth noting that the URL-based uploader can take onion, i2p, and clearweb URLs.</p>
 	<h2>What file types are accepted?</h2>
@@ -25,7 +25,7 @@ echo "
 	</ul>
 	If you see something that breaks these rules, <strong>email me at <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>.</strong> Include the URL to the image so that I can remove it if it does break one of these rules.</p>
 </div>
-<div class='dp50body' style='background-color:#bbb; color:#444;'>
+<div class='dp50body dtext' style='background-color:#999;'>
 	<h2>Stats</h2>
 	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
 	<h2>Misc</h2>

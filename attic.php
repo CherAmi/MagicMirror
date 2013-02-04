@@ -13,6 +13,9 @@ a, a:active, a:visited, a:hover {text-decoration: none;}
 
 .main {margin:0 auto; width:90%;} 
 
+.ltext {color:#222;}
+.dtext {color:#111;}
+
 .dp50{width:50%; float:left; display: inline; *margin-right:-1px; height:80px;}
 .dp50body{width:50%; float:left; display: inline; *margin-right:-1px; height:650px;}
 
