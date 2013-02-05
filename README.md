@@ -3,7 +3,7 @@ Magic Mirror
 
 **[(Live demo)](http://li7qxmk72kp3sgz4.onion/)**
 
-A small, secure, and easy to use encrypted imagehost. 
+A small, secure, and easy to use encrypted imagehost. Bitcoin donations welcome at *1FeqMzpN8cbpKgveHDbax7RKssPWwCQVJK*!
 
 **Features**
 * Can upload images via URL or file
