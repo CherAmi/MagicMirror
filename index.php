@@ -32,7 +32,7 @@ echo "
 	<p>Contact email is <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>. If at any time you want me to PGP sign a message for verification purposes, ask and I'll gladly do so.
 	<br />Source is available <a href='http://github.com/CherAmi/MagicMirror'>here</a>.
 	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations help to keep this service alive.
-	<br />Now available as magicmirror.i2p!</p>
+	<br /></p>
 	<center><h2>Upload<br /></h2></center>
 	<div class='dp50'>
 		<center>
