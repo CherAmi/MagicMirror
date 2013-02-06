@@ -1,9 +1,10 @@
 Magic Mirror
 ============
 
-**[(Live demo)](http://li7qxmk72kp3sgz4.onion/)**
+**[On Tor](http://li7qxmk72kp3sgz4.onion/)**
+**[On i2p](http://magicmirror.i2p/)**
 
-A small, secure, and easy to use encrypted imagehost. Bitcoin donations welcome at *1FeqMzpN8cbpKgveHDbax7RKssPWwCQVJK*!
+A small, secure, and easy to use encrypted imagehost. Bitcoin donations welcome at *14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr*!
 
 **Features**
 * Can upload images via URL or file
