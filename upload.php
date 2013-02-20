@@ -1,5 +1,5 @@
 <?php
-$i2p = "http://magicmirror.i2p";
+$i2p = "http://img.i2p";
 $onion = "http://li7qxmk72kp3sgz4.onion";
 include("cryptlib.php");
 // gettld function from http://codepad.org/LSQ1VyyL
