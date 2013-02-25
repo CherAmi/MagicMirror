@@ -59,7 +59,15 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>magicmirror.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br />
+			If you'd like to give this image a nickname, use the form below.
+			<form action='s.php' method='post'>
+				<input type='text' name='short' placeholder='Nickname for this image'><br />
+				<input type='hidden' name='img' value='$rand'><br />
+				<input type='hidden' name='key' value='$key'><br />
+				<input type='submit' value='Nickname'>
+			</form>
+			</p>
 		</div>
 		";
 
@@ -88,7 +96,14 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>magicmirror.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em></p>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br />
+			If you'd like to give this image a nickname, use the form below.
+			<form action='s.php' method='post'>
+				<input type='text' name='short' placeholder='Nickname for this image'><br />
+				<input type='hidden' name='img' value='$rand'><br />
+				<input type='submit' value='Nickname'>
+			</form>
+			</p>
 		</div>
 		";
 
@@ -97,16 +112,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		die("Invalid image format. Accepted types are jpg, png, gif, and jpeg.");
 	}
 } else {
-	include("attic.php");
-	echo "
-	<div class='dp50 ltext' style='background-color:#666;'>
-		<h1>ERROR</h1>
-	</div>
-	<div class='dp50 dtext' style='background-color:#999;'>
-		<h2>No file or URL specified</h2>
-	</div>
-	";
-	include("basement.php");
+	echo "No file or url specified";
 }
 
 ?>
