@@ -16,5 +16,5 @@ die("Nickname already in use");
 }
 
 copy("img/$img", "img/$short");
-header("Location: image.php?img=$img&key=$key");
+header("Location: image.php?img=$short&key=$key");
 ?>

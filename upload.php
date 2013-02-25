@@ -63,8 +63,8 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 			If you'd like to give this image a nickname, use the form below.
 			<form action='s.php' method='post'>
 				<input type='text' name='short' placeholder='Nickname for this image'><br />
-				<input type='hidden' name='img' value='$rand'><br />
-				<input type='hidden' name='key' value='$key'><br />
+				<input type='hidden' name='img' value='$rand'>
+				<input type='hidden' name='key' value='$key'>
 				<input type='submit' value='Nickname'>
 			</form>
 			</p>
