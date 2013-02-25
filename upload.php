@@ -59,8 +59,10 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br />
-			If you'd like to give this image a nickname, use the form below.
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br /></p>
+			
+			<h2>Nickname?</h2>
+			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space.
 			<form action='s.php' method='post'>
 				<input type='text' name='short' placeholder='Nickname for this image'><br />
 				<input type='hidden' name='img' value='$rand'>
@@ -96,8 +98,10 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		echo "
 		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br />
-			If you'd like to give this image a nickname, use the form below.
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br /></p>
+			
+			<h2>Nickname?</h2>
+			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space.
 			<form action='s.php' method='post'>
 				<input type='text' name='short' placeholder='Nickname for this image'><br />
 				<input type='hidden' name='img' value='$rand'>
