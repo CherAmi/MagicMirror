@@ -42,11 +42,12 @@ $rand = hash("crc32", $deletionkey);
 
 $i2p = "http://img.i2p";
 $onion = "http://li7qxmk72kp3sgz4.onion";
+$onion2 = "http://4344457357774542.onion";
 $clear = "http://img.404.mn";
 
 $successtext = "		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a>, <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>, or the <a href='$clear/image.php?img=$rand&key=$key'>clearnet</a>. To delete it, click <a href='/delete.php?img=$rand&deletionkey=$deletionkey'>here</a>.<br />
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a>, <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>, <a href='$onion2/image.php?img=$rand&key=$key'>4344457357774542.onion</a>, or the <a href='$clear/image.php?img=$rand&key=$key'>clearnet</a>. To delete it, click <a href='/delete.php?img=$rand&deletionkey=$deletionkey'>here</a>.<br />
 			<em>Do not lose your image URL or the deletion URL. To be able to view or delete your image, you will need the URLs on this page.</em><br /></p>
 			
 			<h2>Nickname?</h2>

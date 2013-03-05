@@ -2,6 +2,7 @@ Magic Mirror
 ============
 
 **[On Tor](http://li7qxmk72kp3sgz4.onion/)**
+**[Onion alt](http://4344457357774542.onion/)**
 **[On i2p](http://img.i2p/)**
 **[On the clearnet](http://img.404.mn/)**
 
