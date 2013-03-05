@@ -37,10 +37,27 @@ if($key > 1 && $key < 65) {
 	$key = randString(16);
 }
 
-$rand = hash("crc32", rand(0, 0x7FFFFF));
+$deletionkey = hash("whirlpool", rand(0, 0x7FFFFF));
+$rand = hash("crc32", $deletionkey);
 
 $i2p = "http://img.i2p";
 $onion = "http://li7qxmk72kp3sgz4.onion";
+
+$successtext = "		<div class='ltext' style='background-color:#666; width:100%;'>
+			<h2>Image uploaded successfully.</h2>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. To delete it, click <a href='/delete.php?img=$rand&deletionkey=$deletionkey'>here</a>.<br />
+			<em>Do not lose your image URL or the deletion URL. To be able to view or delete your image, you will need the URLs on this page.</em><br /></p>
+			
+			<h2>Nickname?</h2>
+			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space. <em>Notice: Nicknamed images are incompatible with the deletion system. Don't nickname an image you plan to delete.</em>
+			<form action='s.php' method='post'>
+				<input type='text' name='short' placeholder='Nickname for this image'><br />
+				<input type='hidden' name='img' value='$rand'>
+				<input type='hidden' name='key' value='$key'>
+				<input type='submit' value='Nickname'>
+			</form>
+			</p>
+		</div>";
 
 
 if(isset($_POST['url']) && $_POST['url'] != "") {
@@ -75,22 +92,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		file_put_contents("img/" . $rand, $encrypted);
 		include("attic.php");
 		
-		echo "
-		<div class='ltext' style='background-color:#666; width:100%;'>
-			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br /></p>
-			
-			<h2>Nickname?</h2>
-			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space.
-			<form action='s.php' method='post'>
-				<input type='text' name='short' placeholder='Nickname for this image'><br />
-				<input type='hidden' name='img' value='$rand'>
-				<input type='hidden' name='key' value='$key'>
-				<input type='submit' value='Nickname'>
-			</form>
-			</p>
-		</div>
-		";
+		echo $successtext;
 
 		include("basement.php");
 	} else {
@@ -112,22 +114,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		file_put_contents("img/$rand", $encimg);
 		include("attic.php");
 
-		echo "
-		<div class='ltext' style='background-color:#666; width:100%;'>
-			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a> or <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>. <em>Do not lose this URL. Without the key attached, this URL is useless and will just give you an error message, and we're powerless to get the key back for you.</em><br /></p>
-			
-			<h2>Nickname?</h2>
-			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space.
-			<form action='s.php' method='post'>
-				<input type='text' name='short' placeholder='Nickname for this image'><br />
-				<input type='hidden' name='img' value='$rand'>
-				<input type='hidden' name='key' value='$key'>
-				<input type='submit' value='Nickname'>
-			</form>
-			</p>
-		</div>
-		";
+		echo $successtext;
 
 		include("basement.php");
 	} else {
