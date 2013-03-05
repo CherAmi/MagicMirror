@@ -1,7 +1,17 @@
 <?php
-$i2p = "http://img.i2p";
-$onion = "http://li7qxmk72kp3sgz4.onion";
 include("cryptlib.php");
+
+function randString($len) {
+        $len = intval($len);
+        $alph = array_merge(range("a", "z"), range("A", "Z"));
+        $ret = "";
+        while($len > 0) {
+                $len = $len - 1;
+                $ret = $ret . $alph[rand(0, count($alph) - 1)];
+        }
+        return $ret;
+}
+
 // gettld function from http://codepad.org/LSQ1VyyL
 function gettld( $url )
 {
@@ -19,6 +29,18 @@ function gettld( $url )
 
 	return $tld;
 }
+
+$key = intval($_POST['plen']);
+if($key > 1 && $key < 65) {
+	$key = randString($key);
+} else {
+	$key = randString(16);
+}
+
+$rand = hash("crc32", rand(0, 0x7FFFFF));
+
+$i2p = "http://img.i2p";
+$onion = "http://li7qxmk72kp3sgz4.onion";
 
 
 if(isset($_POST['url']) && $_POST['url'] != "") {
@@ -45,9 +67,6 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		if(preg_match("/image\/[a-zA-Z]*/", curl_getinfo($ch, CURLINFO_CONTENT_TYPE)) == false) {
 			die("Image returned invalid headers.");
 		}
-		
-		$key = md5(rand(0, 0x7FFFFF));
-		$rand = hash("crc32", rand(0, 0x7FFFFF));
 
 		$crypt = new Crypt_AES(CRYPT_AES_MODE_ECB);
 		$crypt->setKey($key);
@@ -78,8 +97,6 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		die("Invalid image format. Accepted types are jpg, png, gif, and jpeg.");
 	}
 } elseif(isset($_FILES['pic'])) {
-	$key = md5(rand(0, 0x7FFFFF));
-	$rand = md5(rand(0, 0x7FFFFF));
 
 	$name = $_FILES['pic']['name'];
 	$ext = explode(".", $name);

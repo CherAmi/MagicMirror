@@ -39,6 +39,7 @@ echo "
 			<h2>File</h2>
 			<form action='upload.php' method='post' enctype='multipart/form-data'>
 				<input type='file' name='pic' style='width: 100%'>
+				<input type='text' name='plen' placeholder='Desired password length (must be >=2)' style='width: 100%'><br />
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
@@ -49,6 +50,7 @@ echo "
 			<h2>URL</h2>
 			<form action='upload.php' method='post'>
 				<input type='text' name='url' placeholder='Image URL' style='width: 100%'><br />
+				<input type='text' name='plen' placeholder='Desired password length (must be >=2)' style='width: 100%'><br />
 				<input type='submit' value='Upload'>
 			</form>
 
