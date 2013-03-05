@@ -19,7 +19,7 @@ a, a:active, a:visited, a:hover {text-decoration: none;}
 .dp50{width:50%; float:left; display: inline; *margin-right:-1px; height:80px;}
 .dp50body{width:50%; float:left; display: inline; *margin-right:-1px; height:650px;}
 
-.dp33{width:33%; float:left; display: inline; *margin-right:-1px; height:80px;}
+.dp25{width:25%; float:left; display: inline; *margin-right:-1px; height:80px;}
 .dp100{width:100%; float:left; display: inline; *margin-right:-1px; height:80px;}
 
 </style>

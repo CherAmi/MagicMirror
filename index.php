@@ -13,25 +13,24 @@ $bandwidth = round((file_get_contents("bandwidth.txt")/1024)/1024, 2);
 echo "
 
 <div class='dp50body ltext' style='background-color:#666;'>
+	<h2>Note to authorities/other interested parties</h2>
+	<p>This service <b>is not hosted on img.404.mn</b>. Seizing, ddosing, or taking any other hostile action towards img.404.mn will have no affect on the Tor/i2p gateways.<br />
 	<h2>What is Magic Mirror?</h2>
-	<p>Magic Mirror is a custom encrypted image host. Nothing you post here can be seen by anybody (including me) due to the way the encryption works unless they're sent a URL with a decryption key in it.<br />Also, it's worth noting that the URL-based uploader can take onion, i2p, and clearweb URLs.</p>
-	<h2>What file types are accepted?</h2>
-	<p>We currently only accept jpg, gif, and png, due to the way the encryption works with PHP GD libraries. It is unlikely that other image formats will be supported in the future.</p>
+	<p>Magic Mirror is a encrypted, <a href='https://github.com/CherAmi/MagicMirror/'>open source</a>, anonymous image host. We have gateways on Tor, i2p, and the clear web. We allow uploads both by file and URL.</p>
 	<h2>Are there rules?</h2>
-	<p><strong>Yes, there are absolutely rules.</strong> There are two prime rules here.
+	<p><strong>Yes, there are absolutely rules.</strong>
 	<ul>
-		<li><strong>No child pornography.</strong> Don't upload anything that is even vaguely erotic and features anybody who could in any way be perceived as being under 18 years old. If it gets reported to me, I'll delete it.</li>
-		<li>Nothing else that will get my site attacked. I'm here to host images, getting tracked and DDoS'd and any other hostile shit being directed at me could force me to shut this service down. I don't have the resources to mitigate attacks, so don't upload anything that'll get my service attacked.</li>
+		<li><strong>No child pornography.</strong> Don't upload anything that is even vaguely erotic if it features anybody who could in <em>any</em> way be perceived as being <18 years old.</li>
+		<li>Nothing that will cause uproar and get my site attacked. I don't have the resources to mitigate attacks on this service.</li>
 	</ul>
-	If you see something that breaks these rules, <strong>email me at <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>.</strong> Include the URL to the image so that I can remove it if it does break one of these rules.</p>
+	If you see something that breaks these rules email me a link and I'll remove it.</p>
 </div>
 <div class='dp50body dtext' style='background-color:#999;'>
 	<h2>Stats</h2>
-	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB</strong>, and having consumed approximately <strong>$bandwidth MB of bandwidth</strong>.</em></p>
+	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
 	<h2>Misc</h2>
-	<p>Contact email is <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>. If at any time you want me to PGP sign a message for verification purposes, ask and I'll gladly do so.
-	<br />Source is available <a href='http://github.com/CherAmi/MagicMirror'>here</a>.
-	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations help to keep this service alive.
+	<p>Contact email: <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>.
+	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations keep this service alive.
 	<br /></p>
 	<center><h2>Upload<br /></h2></center>
 	<div class='dp50'>

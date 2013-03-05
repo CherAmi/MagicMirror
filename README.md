@@ -2,14 +2,15 @@ Magic Mirror
 ============
 
 **[On Tor](http://li7qxmk72kp3sgz4.onion/)**
-**[On i2p](http://magicmirror.i2p/)**
+**[On i2p](http://img.i2p/)**
+**[On the clearnet](http://img.404.mn/)**
 
 A small, secure, and easy to use encrypted imagehost. Bitcoin donations welcome at *14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr*!
 
 **Features**
 * Can upload images via URL or file
 * Uses Tor to mirror images (made to prevent hidden services' IPs from being leaked)
-* Can mirror images from i2p websites as well, though you will need i2p installed locally to do so
+* Can mirror images from i2p websites as well, though you'll need to have i2p installed on your box to do so
 
 Note: If you don't have Tor on whatever box you run this on, you'll need to change the proxy settings in upload.php.
 
@@ -35,4 +36,4 @@ I don't care what you do with this file. If you have the source, all of the work
 * 4.) Chmod bandwidth.txt and image.php so that image.php can write bandwidth stats properly
 * 5.) Spread the link around!
 
--*Cher Ami*
+- *Cher Ami*
