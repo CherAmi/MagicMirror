@@ -26,15 +26,7 @@ echo "
 	If you see something that breaks these rules email me a link and I'll remove it.</p>
 </div>
 <div class='dp50body dtext' style='background-color:#999;'>
-	<h2>Stats</h2>
-	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
-	<h2>Misc</h2>
-	<p>Contact email: <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>.
-	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations keep this service alive.
-	<br /></p>
-	<h2>Want to run a mirror?</h2>
-	<p>The source is available <a href='https://github.com/CherAmi/MagicMirror'>here</a> and you can download a zip file of all of the images currently hosted here <a href='vault.zip'>here</a>. Email me at cherami@tormail.net and I'll put a link to your mirror here. Please include when your mirror was last updated on the index page if you run one, so people know what URLs will and won't work.</p><br />
-	<center><h2>Upload<br /></h2></center>
+	<h2>Upload<br /></h2>
 	<div class='dp50'>
 		<center>
 			<h2>File</h2>
@@ -51,12 +43,20 @@ echo "
 			<h2>URL</h2>
 			<form action='upload.php' method='post'>
 				<input type='text' name='url' placeholder='Image URL' style='width: 100%'><br />
+
 				<input type='text' name='plen' placeholder='Desired password length (must be >=2)' style='width: 100%'><br />
 				<input type='submit' value='Upload'>
 			</form>
-
 		</center>
-	</div>
+	</div><br />
+	<h2>Stats</h2>
+	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
+	<h2>Misc</h2>
+	<p>Contact email: <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>.
+	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations help keep this service alive.
+	<br /></p>
+	<h2>Want to run a mirror?</h2>
+	<p>The source is available <a href='https://github.com/CherAmi/MagicMirror'>here</a> and you can download a zip file of all of the images currently hosted here <a href='vault.zip'>here</a>. Email me at cherami@tormail.net and I'll put a link to your mirror here. Please include when your mirror was last updated on the index page if you run one, so people know what URLs will and won't work.</p><br />
 </div>
 
 ";
