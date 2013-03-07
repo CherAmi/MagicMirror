@@ -31,7 +31,7 @@ function gettld( $url )
 }
 
 $key = intval($_POST['plen']);
-if($key > 1 && $key < 65) {
+if($key > 1) {
 	$key = randString($key);
 } else {
 	$key = randString(16);
