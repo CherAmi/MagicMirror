@@ -36,7 +36,7 @@ echo "
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
-	</div>
+	</div><br /><br /><br />
 
 	<div class='dp50'>
 		<center>
