@@ -27,6 +27,7 @@ echo "
 </div>
 <div class='dp50body dtext' style='background-color:#999;'>
 	<h2>Upload<br /></h2>
+	<div style='height: 30%'>
 	<div class='dp50'>
 		<center>
 			<h2>File</h2>
@@ -36,7 +37,7 @@ echo "
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
-	</div><br /><br /><br />
+	</div>
 
 	<div class='dp50'>
 		<center>
@@ -48,7 +49,8 @@ echo "
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
-	</div><br />
+	</div>
+	</div>
 	<h2>Stats</h2>
 	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
 	<h2>Misc</h2>
