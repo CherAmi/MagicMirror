@@ -12,7 +12,7 @@ if(file_exists("a/$album")) {
 		$img = $broken[0];
 		$key = $broken[1];
 		echo "		
-		<img src='image.php?img=$pic&key=$broken' /><br />
+		<img src='image.php?img=$pic&key=$key' /><br />
 		";
 	}
 	echo "</div>";
