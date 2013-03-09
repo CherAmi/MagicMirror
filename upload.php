@@ -16,7 +16,6 @@ function randString($len) {
 function gettld( $url )
 {
 	$tld = '';
-
 	$url_parts = parse_url((string)$url);
 	if(is_array($url_parts) && isset($url_parts['host']))
 	{
@@ -26,7 +25,6 @@ function gettld( $url )
 			$tld = array_pop($host_parts);
 		}
 	}
-
 	return $tld;
 }
 
@@ -37,29 +35,31 @@ if($key > 1) {
 	$key = randString(16);
 }
 
+
+
+
+
+
 $deletionkey = hash("whirlpool", rand(0, 0x7FFFFF));
 $rand = hash("crc32", $deletionkey);
+if(isset($_POST['nickname']) && strlen($_POST['nickname']) > 1) { $rand = $_POST['nickname']; }
+
+$album = hash("crc32", $_POST['album']);
 
 $i2p = "http://img.i2p";
 $onion = "http://li7qxmk72kp3sgz4.onion";
 $onion2 = "http://4344457357774542.onion";
 $clear = "http://img.404.mn";
 
-$successtext = "		<div class='ltext' style='background-color:#666; width:100%;'>
+$successtext = "
+		<div class='ltext' style='background-color:#666; width:100%;'>
 			<h2>Image uploaded successfully.</h2>
-			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a>, <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>, <a href='$onion2/image.php?img=$rand&key=$key'>4344457357774542.onion</a>, or the <a href='$clear/image.php?img=$rand&key=$key'>clearnet</a>. To delete it, click <a href='/delete.php?img=$rand&deletionkey=$deletionkey'>here</a>.<br />
-			<em>Do not lose your image URL or the deletion URL. To be able to view or delete your image, you will need the URLs on this page.</em><br /></p>
-			
-			<h2>Nickname?</h2>
-			<p>If you'd like to give this image a nickname, use the form below. Please don't nickname the same image too many times if you can avoid doing so, it consumes a lot of hard drive space. <em>Notice: Nicknamed images are incompatible with the deletion system. Don't nickname an image you plan to delete.</em>
-			<form action='s.php' method='post'>
-				<input type='text' name='short' placeholder='Nickname for this image'><br />
-				<input type='hidden' name='img' value='$rand'>
-				<input type='hidden' name='key' value='$key'>
-				<input type='submit' value='Nickname'>
-			</form>
+			<p>View it on <a href='$i2p/image.php?img=$rand&key=$key'>img.i2p</a>, <a href='$onion/image.php?img=$rand&key=$key'>li7qxmk72kp3sgz4.onion</a>, <a href='$onion2/image.php?img=$rand&key=$key'>4344457357774542.onion</a>, or the <a href='$clear/image.php?img=$rand&key=$key'>clearnet</a>. To delete it, click <a href='delete.php?img=$rand&deletionkey=$deletionkey'>here</a>.<br />
+			<em>Do not lose your image URL or the deletion URL. To be able to view or delete your image, you will need the URLs on this page.</em><br /><br />
+			The name of this image (in case you want to add it to an album later) is $rand.<br />
 			</p>
-		</div>";
+		<br /></div>
+";
 
 
 if(isset($_POST['url']) && $_POST['url'] != "") {
@@ -89,16 +89,18 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 
 		$crypt = new Crypt_AES(CRYPT_AES_MODE_ECB);
 		$crypt->setKey($key);
-		
+
 		$encrypted = $crypt->encrypt($result);
 		file_put_contents("img/" . $rand, $encrypted);
-		include("attic.php");
-		
-		echo $successtext;
+		if(isset($_POST['album']) && file_exists("a/" . hash("crc32", $_POST['album']))) { file_put_contents("a/$album/$rand", " "); }
 
+		include("attic.php");
+		echo $successtext;
 		include("basement.php");
 	} else {
+		include("attic.php");
 		die("Invalid image format. Accepted types are jpg, png, gif, and jpeg.");
+		include("basement.php");
 	}
 } elseif(isset($_FILES['pic'])) {
 
@@ -114,16 +116,20 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
 		$crypt->setKey($key);
 		$encimg = $crypt->encrypt($decimg);
 		file_put_contents("img/$rand", $encimg);
+		if(isset($_POST['album']) && file_exists("a/" . hash("crc32", $_POST['album']))) { file_put_contents("a/$album/$rand", " "); }
+
 		include("attic.php");
-
 		echo $successtext;
-
 		include("basement.php");
 	} else {
+		include("attic.php");
 		die("Invalid image format. Accepted types are jpg, png, gif, and jpeg.");
+		include("basement.php");
 	}
 } else {
+	include("attic.php");
 	echo "No file or url specified";
+	include("basement.php");
 }
 
 ?>
