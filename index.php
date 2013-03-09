@@ -24,16 +24,17 @@ echo "
 		<li>Nothing that will cause uproar and get my site attacked. I don't have the resources to mitigate attacks on this service.</li>
 	</ul>
 	If you see something that breaks these rules email me a link and I'll remove it.</p>
+	<h2>Stats</h2>
+	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
 </div>
 <div class='dp50body dtext' style='background-color:#999;'>
-	<h2>Upload<br /></h2>
+	<h2>Quick upload<br /></h2>
 	<div style='height: 30%'>
 	<div class='dp50'>
 		<center>
 			<h2>File</h2>
 			<form action='upload.php' method='post' enctype='multipart/form-data'>
 				<input type='file' name='pic' style='width: 100%'>
-				<input type='text' name='plen' placeholder='Desired password length (must be >=2)' style='width: 100%'><br />
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
@@ -44,15 +45,11 @@ echo "
 			<h2>URL</h2>
 			<form action='upload.php' method='post'>
 				<input type='text' name='url' placeholder='Image URL' style='width: 100%'><br />
-
-				<input type='text' name='plen' placeholder='Desired password length (must be >=2)' style='width: 100%'><br />
 				<input type='submit' value='Upload'>
 			</form>
 		</center>
 	</div>
 	</div>
-	<h2>Stats</h2>
-	<p><em>Currently indexing <strong>$imgcount</strong> images, consuming a total of <strong>$size MB of disk space</strong> and ~<strong>$bandwidth MB of bandwidth</strong>.</em></p>
 	<h2>Misc</h2>
 	<p>Contact email: <a href='mailto:cherami@tormail.net'>cherami@tormail.net</a>. A PGP key is available <a href='pgp.txt'>here</a>.
 	<br />Bitcoin donations welcome! Address is <em>14JGX4sKbejEzRyWgak98ig7nhoa6Jjpyr</em>. Your donations help keep this service alive.
