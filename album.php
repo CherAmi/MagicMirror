@@ -22,5 +22,5 @@ if(file_exists("a/$album")) {
 ";
 }
 
-include("attic.php");
+include("basement.php");
 ?>
