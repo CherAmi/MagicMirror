@@ -42,7 +42,11 @@ if($key > 1) {
 
 $deletionkey = hash("whirlpool", rand(0, 0x7FFFFF));
 $rand = hash("crc32", $deletionkey);
-if(isset($_POST['nickname']) && strlen($_POST['nickname']) > 1) { $rand = $_POST['nickname']; }
+if(isset($_POST['nickname']) && strlen($_POST['nickname']) > 1) {
+	$rand = $_POST['nickname'];
+	$rand = str_replace(" ", "_", $rand);
+	$rand = preg_replace("/\W/", "", $rand);
+}
 
 $album = hash("crc32", $_POST['album']);
 
